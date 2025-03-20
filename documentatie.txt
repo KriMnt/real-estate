@@ -1,0 +1,6 @@
+30 ianuarie 2025
+
+-am creat foldere si toate fisierele pt fiecare folder
+-creare venv (virtual environemnt)  : python -m venv venv           +        .\venv\Scripts\activate
+-care am instalat toate bibiliotecile necesare   : pip install fastapi uvicorn sqlalchemy psycopg2-binary python-dotenv aiohttp Pillow pydantic-settings
+-
