@@ -1,5 +1,5 @@
-from pydantic import BaseModel
-from typing import List, Optional, Dict
+from pydantic import BaseModel, Field
+from typing import List, Optional, Dict, Union
 from datetime import datetime
 
 class PropertyImageBase(BaseModel):
@@ -12,7 +12,7 @@ class PropertyImageCreate(PropertyImageBase):
 class PropertyImage(PropertyImageBase):
     id: int
     property_id: int
-
+    
     class Config:
         from_attributes = True
 
@@ -33,9 +33,9 @@ class PropertyCreate(PropertyBase):
 
 class Property(PropertyBase):
     id: int
-    images: List[PropertyImage]
     created_at: datetime
     updated_at: datetime
-
+    images: Optional[List[PropertyImage]] = []
+    
     class Config:
         from_attributes = True
